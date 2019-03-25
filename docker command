@@ -2,4 +2,38 @@
 1. Centos 7  
 cd /etc/yum.repos.d/
 
+docker 下载地址
+https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos
+wget https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
+
+vim docker-ce.repo 编译docker下载路径：
+baseurl 到清华的路径
+yum intall docker-ce
+
+环境配置：
+
+docker-ce 
+ 配置文件：/etc/docker/daemon.json 需要新建
+ {
+     "registry-mirrors":"https://registry.docker-cn.com"
+ }
+ 
+镜像加速器:
+docker cn 
+https://cr.console.aliyun.com/#/accelerator (阿里云)
+
+启动：
+systemctl start docker.service
+
+docker container command (新命令)
+
+在容器中的程序不能后台运行，
+
+docker run --name kvstor1 -d redis 
+
+绕过容器边缘：
+docker container exec - it kvstor1 /bin/sh
+
+查看某个服务的日志
+docker container logs kvstor1
 
