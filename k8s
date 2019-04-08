@@ -1,0 +1,15 @@
+k8s集群方式：kubeadm 
+
+阿里云镜像源码：
+https://opsx.alibaba.com/mirror
+
+
+yum 文件：
+/etc/yum.repos.d/
+
+yum repolist 查看节点
+
+
+yum install docker-ce kubelet kubeadm kubectl 
+
+ 
