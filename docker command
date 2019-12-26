@@ -37,3 +37,8 @@ docker container exec - it kvstor1 /bin/sh
 查看某个服务的日志
 docker container logs kvstor1
 
+进入后台运行的容器的命令行而不创建新的容器
+docker exec -it container_id /bin/bash
+进入后台运行的容器的命令行并且创建新的容器
+docker run -it container_id /bin/bash
+
